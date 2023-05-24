@@ -16,7 +16,7 @@ GamePlayManager = {
     },
     preload: function() {
         game.load.image('background', 'assets/images/background.png');
-        game.load.spritesheet('horse', 'assets/images/horse.png', 84, 156, 2);
+        game.load.spritesheet('horse', 'assets/images/ambiente.png', 187, 61, 1);
         game.load.spritesheet('diamonds', 'assets/images/diamonds.png', 81, 84, 4);
         
         game.load.image('explosion', 'assets/images/explosion.png');
@@ -114,7 +114,7 @@ GamePlayManager = {
                 if(this.totalTime<=0){
                     game.time.events.remove(this.timerGameOver);
                     this.endGame = true;
-                    this.showFinalMessage('GAME OVER');
+                    this.showFinalMessage('FIN DEL JUEGO');
                 }
             }
         },this);
@@ -132,7 +132,7 @@ GamePlayManager = {
         if(this.amountDiamondsCaught >= AMOUNT_DIAMONDS){
             game.time.events.remove(this.timerGameOver);
             this.endGame = true;
-            this.showFinalMessage('CONGRATULATIONS');
+            this.showFinalMessage('FELICIDADES!!!');
         }
     },
     showFinalMessage:function(msg){
