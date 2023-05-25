@@ -16,8 +16,9 @@ GamePlayManager = {
     },
     preload: function() {
         game.load.image('background', 'assets/images/background.png');
+        game.load.image('ambiente', 'assets/images/ambiente.png');
         game.load.spritesheet('horse', 'assets/images/heroe.png', 130, 156, 1);
-        game.load.spritesheet('diamonds', 'assets/images/diamonds.png', 81, 84, 4);
+        game.load.spritesheet('diamonds', 'assets/images/basura.png', 81, 84, 4);
         
         game.load.image('explosion', 'assets/images/explosion.png');
         
@@ -30,6 +31,7 @@ GamePlayManager = {
     },
     create: function() {
         game.add.sprite(0, 0, 'background');
+        game.add.sprite(420, 364, 'ambiente');
         
         this.boobleArray = [];
         for(var i=0; i<AMOUNT_BOOBLES; i++){
